@@ -396,6 +396,7 @@ def Mesh_Part(model, part, seed_size):
 def Mesh_Stent(model, bias_min, bias_max, globe):
     p = mdb.models[model].parts['Stent']
     e = p.edges
+    ## Edge selection extracted from Abaqus RPY file after meshing manually
     pickedEndEdges = e.getSequenceFromMask(mask=(
         '[#14000 #b4740000 #300000a3 #a0000000 #16d03 #d16d0000 #16800016', 
         ' #1450000 #a0000000 #a8001685 #68000016 #1 #1680b4 #68000000', 
@@ -421,6 +422,7 @@ def Mesh_Stent(model, bias_min, bias_max, globe):
 def Mesh_Stent_Finer(model, bias_min, bias_max, globe):
     p = mdb.models[model].parts['Stent']
     e = p.edges
+    ## Edge selection extracted from Abaqus RPY file after meshing manually
     pickedEndEdges = e.getSequenceFromMask(mask=(
         '[#14000 #b4740000 #300000a3 #a0000000 #16d03 #d16d0000 #16800016', 
         ' #50000 #a0000000 #80001400 #68000016 #1 #1680b4 #68000000', 
